@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import AppHeader from '@/components/AppHeader.vue'
+import AppHeader from '@/components/Header/AppHeader.vue'
 import AppFooter from '@/components/Footer/AppFooter.vue'
 export default {
   components: {

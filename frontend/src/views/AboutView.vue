@@ -1,5 +1,6 @@
 <template>
   <div class="about container">
+    <img src="@/assets/imgs/about.jpg" class="about__img" alt="about brume">
     <h2 class="about__title">О&nbsp;магазине</h2>
     <div class="about__content">
       <p class="about__text">
@@ -20,12 +21,17 @@
 
 <style lang="scss" scoped>
 .about {
+  margin-top: 200px;
   &__title {
     width: 100%;
     text-align: center;
     font-size: 30px;
     font-weight: 700;
     margin: 50px 0;
+  }
+
+  &__img {
+    border-radius: 15px;
   }
 
   &__text {

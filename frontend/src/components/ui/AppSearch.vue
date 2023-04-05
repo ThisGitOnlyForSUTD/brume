@@ -17,15 +17,12 @@ export default {
 .form__group {
   position: relative;
   padding: 15px 0 0 0;
-  width: 50%;
+  width: 10%;
   height: 50px;
 }
 
 .form__field {
-  font-family: inherit;
-  width: 100%;
   border: 0;
-  border-bottom: 2px solid $grey-color;
   outline: 0;
   font-size: 1.3rem;
   color: $black-color;

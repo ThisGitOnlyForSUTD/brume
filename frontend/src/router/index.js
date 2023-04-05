@@ -8,7 +8,7 @@ const routes = [
     component: HomeView,
     meta: {
       layout: 'main',
-      auth: true
+      auth: false
     }
   },
   {
@@ -16,18 +16,45 @@ const routes = [
     name: 'about',
     meta: {
       layout: 'main',
-      auth: true
+      auth: false
     },
     component: () => import('../views/AboutView.vue')
   },
   {
-    path: '/delivery&payment',
+    path: '/catalog',
+    name: 'catalog',
+    meta: {
+      layout: 'main',
+      auth: false
+    },
+    component: () => import('@/views/CatalogView.vue')
+  },
+  {
+    path: '/delivery-brume',
     name: 'delivery',
     meta: {
       layout: 'main',
-      auth: true
+      auth: false
     },
     component: () => import('../views/DeliveryView.vue')
+  },
+  {
+    path: '/contacts',
+    name: 'contacts',
+    meta: {
+      layout: 'main',
+      auth: false
+    },
+    component: () => import('../views/ContactsView.vue')
+  },
+  {
+    path: '/product',
+    name: 'product',
+    meta: {
+      layout: 'main',
+      auth: false
+    },
+    component: () => import('../views/ProductView.vue')
   }
 ]
 

@@ -1,20 +1,10 @@
 <template>
   <div class="home">
-    <home-slider class="home__slider"/>
+    <app-slider class="home__slider"/>
     <div class="container">
       <section class="home-positions">
-      <router-link to="/" class="home-positions__link">
-        <button class="home-positions__button">
-          Cпортивные косютмы
-        </button>
-        <img class="home-positions__img" src="https://avatars.mds.yandex.net/i?id=157223e1795f05c22f9f1d74bede97f1922dc718-7698965-images-thumbs&n=13" alt="jeans">
-      </router-link>
-      <router-link to="/" class="home-positions__link">
-        <button class="home-positions__button">
-          Cпортивные косютмы
-        </button>
-        <img class="home-positions__img" src="https://krasavica.info/uploads/posts/2022-02/1645176362_1-krasavica-info-p-goluboi-sportivnii-kostyum-devushka-krasiv-1.jpg" alt="jeans">
-      </router-link>
+      <promo-card :img="'man'" :text="'Мужское'" />
+      <promo-card :img="'wumen'" :text="'Женское'" />
     </section>
     <section class="home-hit">
       <h2 class="home-hit__title">
@@ -24,7 +14,7 @@
         Хиты продаж
       </h2>
       <div class="home-hit__list">
-        <app-card v-for="item in 3" :key="item" :lable-type="'hit'"/>
+        <app-card v-for="item in products" :key="item.id" :lable-type="'hit'"/>
       </div>
     </section>
     <section class="home-new">
@@ -35,7 +25,9 @@
         Новинки
       </h2>
       <div class="home-new__list">
-        <app-card v-for="item in 3" :key="item" :lable-type="'new'"/>
+        <div v-for="item in products" :key="item.id">
+        <app-card :product="item" :lable-type="'new'"/>
+        </div>
       </div>
     </section>
     </div>
@@ -43,14 +35,26 @@
 </template>
 
 <script>
-import HomeSlider from '@/components/HomePage/HomeSlider.vue'
+import AppSlider from '@/components/ui/AppSlider.vue'
 import AppCard from '@/components/ui/AppCard.vue'
+import PromoCard from '../components/ui/PromoCard.vue'
+import { useStore } from 'vuex'
+import { computed } from 'vue'
 
 export default {
   name: 'HomeView',
   components: {
-    HomeSlider,
-    AppCard
+    AppSlider,
+    AppCard,
+    PromoCard
+  },
+  setup () {
+    const store = useStore()
+    const products = computed(() => store.getters['products/PRODUCTS'])
+    console.log(products)
+    return {
+      products
+    }
   }
 }
 </script>
@@ -62,9 +66,8 @@ export default {
   &-positions {
     display: flex;
     justify-content: center;
-    gap: 0 40px;
     margin: 30px 0;
-
+    gap: 20px;
     &__link {
       background: $grey-color;
       position: relative;
@@ -89,22 +92,24 @@ export default {
     }
 
     &__img {
-      flex-basis: calc(100% / 2 - 20px);
+      flex-basis: 80%;
       height: 500px;
     }
   }
 
   &-hit, &-new {
-    margin-top: 70px;
+    margin: 0 auto;
+    width: 100%;
     &__title {
       font-size: 25px;
+      margin-top: 60px;
     }
     &__list {
       margin: 20px 0;
       display: flex;
       justify-content: flex-start;
       flex-wrap: wrap;
-      gap: 0 60px;
+      gap: 0 30px;
     }
   }
 }

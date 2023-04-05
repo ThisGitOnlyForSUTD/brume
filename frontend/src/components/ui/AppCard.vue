@@ -1,13 +1,13 @@
 <template>
-  <div class="card">
+  <router-link to="/product" class="card">
     <span v-if="lableType" class="card__lable" :style="[lableType === 'hit' ? {'background-color': '#d6928b'} : '']">
       {{ lableType }}
     </span>
     <img src="https://static.bershka.net/4/photos2/2023/V/1/2/p/2416/160/001/0833f4c54776523526b5a89df0023398-2416160001_1_1_0.jpg?imwidth=850&impolicy=bershka-itxmedium&imformat=generic" alt="" class="card__img">
-    <span class="card__name">Lorem, ipsum dolor.</span>
+    <h4 class="card__name">{{ product }}</h4>
     <span class="card__price">1000p</span>
     <button class="card__button">Добавить</button>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -16,8 +16,15 @@ export default {
     lableType: {
       type: String,
       required: false,
-      defult: ''
+      default: ''
+    },
+    item: {
+      type: Object,
+      required: false,
+      default: () => {}
     }
+  },
+  setup () {
   }
 }
 </script>
@@ -27,7 +34,7 @@ export default {
 .card {
   display: flex;
   flex-direction: column;
-  max-width: 350px;
+  max-width: 320px;
   width: 100%;
   max-height: 750px;
   height: 100%;
