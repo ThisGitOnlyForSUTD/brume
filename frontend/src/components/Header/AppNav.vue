@@ -38,34 +38,34 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/style/vars.scss';
-  .nav {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    max-width: 700px;
+.nav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  max-width: 700px;
 
-    &__item {
-      &:hover {
-        fill: $red-color;
-      }
-    }
-
-    &__list {
-      display: flex;
-      align-items: center;
-      flex-wrap: nowrap;
-      gap: 0 35px;
-    }
-
-    &__link {
-      color: $black-color;
-      font-weight: 500;
-      align-items: center;
-
-      &:hover {
-        color: $red-color;
-        border-bottom: 1px solid;
-      }
+  &__item {
+    &:hover {
+      fill: $red-color;
     }
   }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0 35px;
+  }
+
+  &__link {
+    color: $black-color;
+    font-weight: 500;
+    align-items: center;
+
+    &:hover {
+      color: $red-color;
+      border-bottom: 1px solid;
+    }
+  }
+}
 </style>

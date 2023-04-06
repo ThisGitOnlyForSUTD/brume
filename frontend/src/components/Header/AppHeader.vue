@@ -26,18 +26,10 @@
 </template>
 
 <script>
-import { ref } from 'vue'
 import AppNav from '@/components/Header/AppNav.vue'
 import AppSearch from '@/components/ui/AppSearch.vue'
 export default {
-  components: { AppNav, AppSearch },
-  setup () {
-    const showAlert = ref(true)
-
-    return {
-      showAlert
-    }
-  }
+  components: { AppNav, AppSearch }
 }
 </script>
 
@@ -45,12 +37,10 @@ export default {
 @import '@/style/vars.scss';
 .header {
   border-bottom: 1px solid;
-  margin-bottom: 15px;
-  position: absolute;
-  z-index: 1000;
-  top: 0;
-  width: 100%;
   padding-bottom: 20px;
+  &__search {
+    margin-bottom: 1px;
+  }
 
   &__cart{
     color: $black-color;

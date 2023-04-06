@@ -7,6 +7,7 @@ import { useRoute } from 'vue-router'
 import MainLayout from './layouts/MainLayout.vue'
 import AuthLayout from './layouts/AuthLayout.vue'
 import { computed } from 'vue'
+import AppLoader from './components/ui/AppLoader.vue'
 export default {
   setup () {
     const route = useRoute()
@@ -18,7 +19,8 @@ export default {
   },
   components: {
     MainLayout,
-    AuthLayout
+    AuthLayout,
+    AppLoader
   }
 }
 </script>

@@ -47,7 +47,8 @@ export default {
   display: block;
   transition: 0.2s;
   font-size: 15px;
-  color: $grey-color;
+  color: $black-color;
+  font-weight: 500;
 }
 
 .form__field:focus {
@@ -57,13 +58,13 @@ export default {
     display: block;
     transition: 0.2s;
     font-size: 20px;
-    color: $red-color;
+    color: $black-color;
     font-weight:500;
   }
   padding-bottom: 6px;
   font-weight: 500;
   border-width: 2px;
-  border-color: $red-color;
+  border-color: $black-color;
   border-image-slice: 2;
 }
 /* reset input */

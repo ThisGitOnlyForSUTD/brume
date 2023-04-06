@@ -3,7 +3,7 @@
     <button class="promo__button">
       {{ text }}
     </button>
-    <img class="promo__img" :src="require(`@/assets/imgs/${img}.jpg`)" :alt="{img}">
+    <img class="promo__img" :src="require(`@/assets/imgs/${img}.webp`)" :alt="{img}">
   </div>
 </template>
 

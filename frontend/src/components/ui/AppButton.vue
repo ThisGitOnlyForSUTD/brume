@@ -1,7 +1,7 @@
 <template>
-  <router-link :to="link" class="app-button">
+  <button :to="link" class="app-button">
     {{ text }}
-  </router-link>
+  </button>
 </template>
 
 <script>

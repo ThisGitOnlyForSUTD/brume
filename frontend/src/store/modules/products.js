@@ -1,4 +1,4 @@
-import productList from '@/mocupItem'
+import productList from '@/mocupItem.js'
 
 export default {
   namespaced: true,

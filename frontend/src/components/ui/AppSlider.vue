@@ -10,16 +10,14 @@
   >
     <swiper-slide
       ><img
-        src="https://cdn.shortpixel.ai/spai/w_1900+h_400+ret_img+to_webp+c_center/https://www.thestorefront.com/mag/wp-content/uploads/2020/08/showroomwfurniture-scaled.jpg" /></swiper-slide
+        src="@/assets/imgs/slide1.jpg" /></swiper-slide
     ><swiper-slide
       ><img
-        src="https://www.modeagentur-kimpfler.de/wp-content/uploads/2021/01/kimpfler-showroom-lodenfrey-02.jpg" /></swiper-slide
+        src="@/assets/imgs/slide2.jpg" /></swiper-slide
     ><swiper-slide
       ><img
-        src="https://www.modeagentur-kimpfler.de/wp-content/uploads/2021/01/kimpfler-showroom-lodenfrey-04-780x585.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img src="https://www.modeagentur-kimpfler.de/wp-content/uploads/2021/01/kimpfler-showroom-hemden-kleiderstaender-780x520.jpg"
-    /></swiper-slide>
+        src="@/assets/imgs/slide3.jpg" /></swiper-slide
+    >
   </swiper>
 </div>
 </template>

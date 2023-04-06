@@ -18,13 +18,11 @@ export default {
       required: false,
       default: ''
     },
-    item: {
+    product: {
       type: Object,
-      required: false,
+      require: true,
       default: () => {}
     }
-  },
-  setup () {
   }
 }
 </script>
